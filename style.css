@@ -1,0 +1,74 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+/* Container for the slider */
+.slider {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Image styling */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+/* Navigation buttons */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.slider:hover .prev,
+.slider:hover .next {
+    opacity: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Button hover effect */
+.prev:hover,
+.next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+
+    .prev,
+    .next {
+        padding: 8px;
+    }
+}
